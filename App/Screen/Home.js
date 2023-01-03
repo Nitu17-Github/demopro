@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeAreaView, FlatList, View, Text, TextInput, Pressable, Image, StyleSheet } from 'react-native'
-import { Card, Icon } from 'react-native-basic-elements'
+import { Card, Icon, StatusBar } from 'react-native-basic-elements'
 import Category from '../Components/Category'
 import Event from '../Components/Event'
 import Explore from '../Components/Explore'
@@ -136,6 +136,10 @@ function Home() {
 
 
         <View style={styles.container}>
+            <StatusBar
+            backgroundColor={'#fff'}
+            barStyle="dark-content"
+            />
 
             <View style={styles.imageView}>
 
@@ -257,7 +261,9 @@ export default Home
 const styles = StyleSheet.create({
     container: {
         // backgroundColor:'red'
-        marginTop: 15
+        // marginTop: 15
+        flex:1,
+        backgroundColor:'#fff'
     },
     image: {
         height: 50,
@@ -273,6 +279,7 @@ const styles = StyleSheet.create({
     imageView: {
         flexDirection: 'row',
         paddingHorizontal: 20,
+        marginTop:29
         // alignItems:'center'
 
     },

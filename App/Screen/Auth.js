@@ -61,6 +61,7 @@ const Auth = ({navigation}) => {
 
         <Pressable
         onPress={()=>NavigationService.navigate('Registration')}
+
         >
 
             <LinearGradient

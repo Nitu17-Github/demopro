@@ -7,5 +7,8 @@ export const COLORS = {
   darkred:'#ad5f59',
   lightyellow:'#e2cdbf',
   darkyellow:'#f7e07d',
-  ofwhite:'#fafafc'
+  ofwhite:'#fafafc',
+  ofYellow:'#fffdf',
+  yello11:'#f8b338',
+  lightBlack:'#2a2a2a'
 };

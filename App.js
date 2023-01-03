@@ -7,6 +7,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import Auth from './App/Screen/Auth';
 import NavigationService from './App/Service/Navigation';
 import Home from './App/Screen/Home';
+import Rewards from './App/Screen/Rewards';
+import BottomTab from './App/Navigation/BottomTab';
+import Toptab from './App/Screen/Toptab';
 
 
 const Stack = createNativeStackNavigator();
@@ -28,11 +31,16 @@ return (
          
           <Stack.Screen name="Auth" component={Auth} />
           <Stack.Screen name="Registration" component={Registration} />
+          <Stack.Screen name="BottomTab" component={BottomTab} />
+          <Stack.Screen name="Tobtab" component={Toptab}/>
+
         </Stack.Navigator>
       </NavigationContainer>
       {/* <Auth/>
        <Registration/> */}
-       <Home/>
+       {/* <Home/> */}
+       {/* <BottomTab/> */}
+       {/* <Rewards/> */}
     </View>
   )
 }
