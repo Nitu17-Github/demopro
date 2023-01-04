@@ -38,7 +38,7 @@ const BottomTab = () => {
             size = 22;
   
             if (route.name === 'HOME') {
-            //   return <Icon name="gift"  type='AntDesign'size={size} color={color} />;
+              // return <Icon name="gift"  type='AntDesign'size={size} color={color} />;
             return <Icon name="home"  type='Entypo'size={size} color={color} />;
 
             } else if (route.name === 'Rewards') {

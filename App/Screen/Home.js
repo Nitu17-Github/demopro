@@ -142,9 +142,10 @@ function Home() {
             />
 
             <View style={styles.imageView}>
-
+                <Pressable onPress={()=>NavigationService.openDrawer()}>
                 <Image source={require('./../assets/Profile/Ann.jpeg')}
                     style={styles.image} />
+                </Pressable>
 
                 <View style={styles.textView}>
 

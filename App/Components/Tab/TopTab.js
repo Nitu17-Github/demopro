@@ -12,6 +12,9 @@ import Top from '../../Screen/Top';
 import Tags from '../../Screen/Tags';
 import { COLORS } from '../../Constants/Colors';
 import { moderateScale } from '../../Constants';
+import Audio from '../../Screen/Audio';
+import Accounts from '../../Screen/Accounts';
+// import Listitem from './../../Components/Listitem';
 
 
 
@@ -21,22 +24,22 @@ const Tab = createMaterialTopTabNavigator();
 const Toptab= () => {
     return (
         <View style={styles.container}>
-        <StatusBar
+        {/* <StatusBar
           backgroundColor={COLORS.ofwhite}
           barStyle="dark-content"
           translucent={false}
-        /> 
+        />  */}
         {/* <SearchHeader /> */}
         {/* <ScrollView> */}               
         <Tab.Navigator
           initialLayout="News"
           tabBarOptions={{
             style: {
-              activeTintColor: COLORS.themecolor,
+              activeTintColor: COLORS.white11,
               backgroundColor: COLORS.headerColor,
               height: moderateScale(40),
             },
-            activeTintColor: COLORS.themecolor,
+            activeTintColor: COLORS.grey11,
             inactiveTintColor: COLORS.gray2,
   
             labelStyle: {
@@ -56,38 +59,24 @@ const Toptab= () => {
               // width: moderateScale(40),
             },
           }}>
-          <Tab.Screen name="Top" component={Top} />
+          <Tab.Screen name="Top" component={Top} 
+         
+          />
           {/* {login_status ? (
             <Tab.Screen name="Mconnect" component={Mconnect} />
           ) : null} */}
         
-            <Tab.Screen name="Tag" component={Tags} />
+            <Tab.Screen name="Tag" component={Tags}/>
+
+            <Tab.Screen name="Audio" component={Audio}/>
+            <Tab.Screen name='Accounts' component={Accounts}/>
+            {/* <Tab.Screen name='listitem'  component={Listitem}/>                             */}
       
         </Tab.Navigator>
         {/* </ScrollView> */}
       </View>
     );
   }
-  
-  // const mapStateToProps = state => {
-  //   return {
-  //     cart: state.CartItem.cartItems,
-  //     total: state.CartItem.total,
-  //   };
-  // };
-  
-//   export default connect(mapStateToProps)(Home);
-  
-//   const styles = StyleSheet.create({
-//     container: {
-//       flex: 1,
-//       backgroundColor: COLORS.PrimaryTheam,
-//       color: COLORS.black,
-//     },
-//   });
-
-//     );
-// };
 
 // define your styles
 const styles = StyleSheet.create({
@@ -95,7 +84,9 @@ const styles = StyleSheet.create({
         flex: 1,
         // justifyContent: 'center',
         // alignItems: 'center',
-        // backgroundColor: '#2c3e50',
+        backgroundColor: 'black',
+        // color:'black'
+        
     },
 });
 

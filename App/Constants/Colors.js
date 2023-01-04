@@ -10,5 +10,7 @@ export const COLORS = {
   ofwhite:'#fafafc',
   ofYellow:'#fffdf',
   yello11:'#f8b338',
-  lightBlack:'#2a2a2a'
+  lightBlack:'#2a2a2a',
+  grey11:'#959595',
+  white11:'#ffffff'
 };

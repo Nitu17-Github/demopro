@@ -1,12 +1,92 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { StatusBar } from 'react-native-basic-elements';
+import Listitem from './../Components/Listitem';
+// import StatusBar from 'react-native-basic-elements';
+// import Tags from './../Screen/Tags';
+
+
+
+const DATA = [
+    {
+        name: 'gfdhjkhkdj',
+        post: 'hii'
+    },
+    {
+        name: 'AAAAAAAA',
+        post: 'hii'
+    },
+    {
+        name: 'BBBBBBBBBBB',
+        post: 'hii'
+    },
+    {
+        name: 'CCCCCCCCCCCC',
+        post: 'hii'
+    },
+    {
+        name: 'DDDDDDDDD',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+    {
+        name: 'EEEEEEEEEEEEEEE',
+        post: 'hii'
+    },
+
+]
 
 // create a component
 const Tags = () => {
     return (
         <View style={styles.container}>
-            <Text>MyComponent</Text>
+          
+            {/*            
+                {
+                    DATA.map((item) => {
+                        return (
+                            <Listitem data={item} />
+                        )
+                    })
+                } */}
+
+            <FlatList
+                data={DATA}
+                renderItem={({ item }) => {
+                    return (
+                        <Listitem data={item} />
+                    )
+                }}
+            />
+
         </View>
     );
 };
@@ -15,9 +95,10 @@ const Tags = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+
         // justifyContent: 'center',
         // alignItems: 'center',
-        backgroundColor: '#fff',
+        // backgroundColor: 'black',
     },
 });
 

@@ -44,7 +44,7 @@ function Registration() {
 </Card>
 
 <Pressable style={styles.regView}
-     onPress={()=>NavigationService.navigate('BottomTab')}
+     onPress={()=>NavigationService.navigate('Home')}
      >
     <Text style={styles.register}>Register</Text>
 

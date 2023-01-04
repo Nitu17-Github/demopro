@@ -1,41 +1,21 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Pressable, TextInput, FlatList } from 'react-native';
-import { Icon } from 'react-native-basic-elements';
+import { Icon, StatusBar } from 'react-native-basic-elements';
 import Toptab from '../Components/Tab/TopTab';
 import { COLORS } from '../Constants/Colors';
+import { FONTS } from '../Constants/Fonts';
 
-const DATA=[
-    {
-        name:'gfdhjkhkdj',
-        post:'hii'
-    },
-    {
-        name:'AAAAAAAA',
-        post:'hii'
-    },
-    {
-        name:'BBBBBBBBBBB',
-        post:'hii'
-    },
-    {
-        name:'CCCCCCCCCCCC',
-        post:'hii'
-    },
-    {
-        name:'DDDDDDDDD',
-        post:'hii'
-    },
-    {
-        name:'EEEEEEEEEEEEEEE',
-        post:'hii'
-    }
-]
+
 
 // create a component
 const Exploring = () => {
     return (
         <View style={styles.container}>
+            <StatusBar
+                backgroundColor={'#000000'}
+                barStyle="light-content"
+            />
             <View style={styles.mainView}>
                 <View style={styles.searchView}>
                     <Icon name='caretleft' type='AntDesign'
@@ -45,7 +25,9 @@ const Exploring = () => {
                 </View>
 
                 <Pressable style={styles.coffeeView}>
-                    <Icon name='left' type='AntDesign' />
+                    <Icon name='left' type='AntDesign'
+                        style={styles.leftIcon}
+                    />
                     <View style={styles.cofeeMain}>
                         <Icon name='search' type='EvilIcons'
                             style={styles.searchIcon} />
@@ -53,10 +35,9 @@ const Exploring = () => {
                             style={styles.coffeeText} />
                     </View>
                 </Pressable>
-   
-          
+
             </View>
-            <Toptab/>
+            <Toptab />
         </View>
     );
 };
@@ -67,7 +48,7 @@ const styles = StyleSheet.create({
         flex: 1,
         // justifyContent: 'center',
         // alignItems: 'center',
-        // backgroundColor: 'black',
+        backgroundColor: 'black',
     },
     mainView: {
         marginTop: 20,
@@ -83,36 +64,39 @@ const styles = StyleSheet.create({
     },
     arrowIcon: {
         fontSize: 13,
-        color: 'black'
+        color: 'white',
     },
     iconView: {
         flexDirection: 'row'
     },
     searchText: {
         // marginTop:10
-        color: 'black'
+        color: 'white',
+        fontFamily: FONTS.bold
     },
     coffeeView: {
         flexDirection: 'row',
         alignItems: 'center',
     },
+    leftIcon: {
+        color: 'white',
+        fontSize: 30,
+        fontFamily: FONTS.bold
+    },
     cofeeMain: {
-        backgroundColor:COLORS.lightBlack,
-       
+        backgroundColor: COLORS.lightBlack,
         marginHorizontal: 10,
-        paddingHorizontal: 115,
         borderRadius: 13,
         alignItems: 'center',
         flexDirection: 'row',
-        // textAlign:'left'
-        // paddingLeft:30
-        // marginLeft:20
     },
     searchIcon: {
-        color: 'gray'
+        color: 'grey',
+        paddingLeft: 10,
     },
     coffeeText: {
-        //   marginLeft:20
+        marginRight: 200,
+        color: 'red'
     }
 });
 
